@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ffe83fe9-913e-4c7f-e5ae-2c97dbb071b8": {
+      "ProjectGuid": "ffe83fe9-913e-4c7f-e5ae-2c97dbb071b8",
+      "DisplayName": "Assembly-CSharp",
+      "ColorIndex": 0
+    },
+    "80e2ac0c-2463-d62e-c4dd-da7e051618ce": {
+      "ProjectGuid": "80e2ac0c-2463-d62e-c4dd-da7e051618ce",
+      "DisplayName": "Assembly-CSharp.Player",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "4b7c0ad9-ad6c-bee8-7500-3790a2a8c263": {
+      "ProjectGuid": "4b7c0ad9-ad6c-bee8-7500-3790a2a8c263",
+      "DisplayName": "Unity.2D.Tilemap.Editor",
+      "ColorIndex": 2
+    },
+    "e39e20d5-f12f-c5c6-e436-613e7975f6b0": {
+      "ProjectGuid": "e39e20d5-f12f-c5c6-e436-613e7975f6b0",
+      "DisplayName": "UnityEditor.UI",
+      "ColorIndex": 3
+    },
+    "2f1cc0cb-0711-ebd6-bcea-8f28b9029edb": {
+      "ProjectGuid": "2f1cc0cb-0711-ebd6-bcea-8f28b9029edb",
+      "DisplayName": "Zenject",
+      "ColorIndex": 4
+    },
+    "19120f3e-19b8-d66b-c9f6-1d49d589f7d7": {
+      "ProjectGuid": "19120f3e-19b8-d66b-c9f6-1d49d589f7d7",
+      "DisplayName": "Unity.2D.Sprite.Editor",
+      "ColorIndex": 5
+    },
+    "02a21d52-0d2c-f730-d8fc-88b1039dd4ed": {
+      "ProjectGuid": "02a21d52-0d2c-f730-d8fc-88b1039dd4ed",
+      "DisplayName": "Unity.CollabProxy.Editor",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}
