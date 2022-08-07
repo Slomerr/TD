@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using TD.Assets.Enemies;
-using TD.Assets.GameInit;
+using TD.Assets.GameInit.CoreState;
 using UnityEngine;
 using Zenject;
 
@@ -14,7 +14,6 @@ namespace TD.Assets.Waves
         [Inject] private ICustomLogger m_CustomLogger;
 
         private CoroutinesHolder m_CoroutinesHolder;
-
 
         public void Initialize()
         {

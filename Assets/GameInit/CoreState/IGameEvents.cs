@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TD.Assets.GameInit
+namespace TD.Assets.GameInit.CoreState
 {
     public interface IGameEvents
     {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace TD.Assets.GameInit
+namespace TD.Assets.GameInit.CoreState
 {
     public class GameEvents : MonoBehaviour, IInitializable, IGameEvents
     {

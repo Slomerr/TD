@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace TD.Assets.GameInit.Installer
+namespace TD.Assets.GameInit.CoreState.Installer
 {
     public class GameInitModuleInstaller : MonoInstaller
     {
@@ -9,7 +9,7 @@ namespace TD.Assets.GameInit.Installer
 
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<GameInitStateMachine>().AsSingle();
+            Container.BindInterfacesAndSelfTo<CoreStateManager>().AsSingle();
             Container.BindInterfacesAndSelfTo<GameEvents>().FromInstance(m_GamneEventsPrefab).AsCached();
         }
     }

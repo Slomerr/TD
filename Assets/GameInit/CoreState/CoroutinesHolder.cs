@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace TD.Assets.GameInit
+namespace TD.Assets.GameInit.CoreState
 {
     public class CoroutinesHolder : MonoBehaviour
     {
