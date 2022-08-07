@@ -9,15 +9,50 @@ namespace FSM
         [Inject] private List<IStateManager> m_StateManagers;
         [Inject] private ICustomLogger m_CustomLogger;
 
+        private Type m_CurrentState; 
+        
         private Dictionary<Type, IStateManager> m_ManagersMap;
 
         public void Initialize()
+        {
+            ConfigureMap();
+            
+            SelectState<TestState>();
+        }
+
+        public void SelectState<TState>() where TState : IState
+        {
+            var newState = typeof(TState);
+            if (m_CurrentState == newState)
+            {
+                m_CustomLogger.Log($"Trying activate state [{nameof(TState)}," +
+                                   $"but this state is already activated]");
+                return;
+            }
+            
+            if (!m_ManagersMap.ContainsKey(newState))
+            {
+                m_CustomLogger.LogError($"Map of {nameof(IStateManager)} does not contain value " +
+                                        $"with key {nameof(TState)}");
+                return;
+            }
+
+            if (m_CurrentState != null)
+            {
+                m_ManagersMap[m_CurrentState].DeactivateState();
+            }
+
+            m_CurrentState = newState;
+            m_ManagersMap[m_CurrentState].ActivateState();
+        }
+
+        private void ConfigureMap()
         {
             m_ManagersMap = new Dictionary<Type, IStateManager>();
             var typeAttribute = typeof(StateIdentifier);
             foreach (var manager in m_StateManagers)
             {
-                var attributes = m_StateManagers.GetType().GetCustomAttributes(typeAttribute, false);
+                var attributes = manager.GetType().GetCustomAttributes(typeAttribute, false);
                 foreach (var attribute in attributes)
                 {
                     if (attribute is StateIdentifier identifier)
@@ -28,11 +63,6 @@ namespace FSM
             }
         }
 
-        public void SelectState<TState>() where TState : IState
-        {
-            m_CustomLogger.Log(nameof(TState));
-        }
-        
         private void AddToMap(IStateManager manager, StateIdentifier identifier)
         {
             if (m_ManagersMap.ContainsKey(identifier.StateType))
