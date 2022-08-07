@@ -16,8 +16,6 @@ namespace FSM
         public void Initialize()
         {
             ConfigureMap();
-            
-            SelectState<TestState>();
         }
 
         public void SelectState<TState>() where TState : IState
